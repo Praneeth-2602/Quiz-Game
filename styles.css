@@ -1,0 +1,215 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #100721;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+navbar{
+    background: #100721;
+    color: white;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh; /* Decrease the height to your desired value */
+}
+
+navbar h1{
+    font-size: 2rem;
+    margin-left: 5rem;
+
+}
+
+navbar ul{
+    margin-right: 5rem;
+}
+
+navbar li{
+    list-style: none;
+    display: inline;
+    padding: 3rem;
+}
+
+navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.container, .image-container{
+    background: #100721;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trivia{
+    background-image: url(./assets/images/OIP.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.pokemon{
+    background-image: url(./assets/images/pokemon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card h1{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    position: relative;
+    top: 270px;
+    right: 70px;
+    margin: 0 auto;
+    width: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover a {
+    opacity: 1; 
+}
+
+.container > div{
+    flex: 0 0 300px;
+}
+
+.container > div .content{
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    opacity: 0; 
+    flex-direction: column;
+    height: 350px;
+    width: 350px;
+    justify-content: flex-end;
+    background: #02022e;
+    background: linear-gradient(0deg, rgba(2, 2, 46, 0.67550) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translateY(-65%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+    margin-left: 50px; /* Added property */
+}
+
+.container > div .content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.container > div:hover{
+    flex: 0 0 350px;
+    height: 350px;
+    box-shadow: 1px 3px 15px #7645d8;
+    transform: translateY(-30px);
+}
+
+.container > div:hover .content{
+    opacity: 1;
+    transform: translateY(-71.5%);
+    visibility: visible;
+    width: 350px;
+    height: 350px;
+}
+
+.image-container{
+    background: #CCCCCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 125vh;
+    position: relative;
+    top: 15vh;
+    border-radius: 2rem;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #fff;
+    flex-direction: column;
+    margin-left: 150px;
+}
+
+.options > div{
+    position: relative;
+    top: 5px;
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    margin-bottom: 40px;
+    background: #f3f3f3;
+    color: #02022e;
+    height: 45px;
+    width: 200px;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.options > div > input{
+    margin-right: 13px;
+    cursor: pointer;   
+    display: none; 
+}
+
+.options > div > label{
+    margin-left: 28px;
+    align-items: center;
+    display: flex;
+}
+
+.options .correct {
+    background: #00ff00;
+}
+
+.options .wrong{
+    background: #ff0000;
+    transition: background 0.5s;
+}
