@@ -213,3 +213,13 @@ navbar a{
     background: #ff0000;
     transition: background 0.5s;
 }
+
+hr{
+    width: 90%;
+    margin-top: 70px;
+    color: #100721;
+    border: 1px solid #fff;
+    position: fixed;
+    right: 9vh;
+    top: 0vh;
+}
